@@ -126,20 +126,14 @@ function ProgressBar({ percent = 33 }) {
 
 class TimeBox extends React.Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            isRunning: false,
-            isPaused: false,
-            pausesCount:0,
-            elapsedTimeInSeconds:0
-        }
-        this.stop=this.stop.bind(this)
-        this.start=this.start.bind(this)
-        this.pause=this.pause.bind(this)
+    state={
+        isRunning: false,
+        isPaused: false,
+        pausesCount:0,
+        elapsedTimeInSeconds:0
     }
 
-    stop(event){
+    stop=(event)=>{
         this.setState({
             isRunning: false,
             isPaused: false,
@@ -149,7 +143,7 @@ class TimeBox extends React.Component {
         this.stopTimer();
     }
 
-    startTimer(){
+    startTimer=()=>{
         this.interval=window.setInterval(() => {
          this.setState(
              (prevState) => ({ elapsedTimeInSeconds: prevState.elapsedTimeInSeconds + 0.1 })
@@ -157,11 +151,11 @@ class TimeBox extends React.Component {
         }, 100);
     }
 
-    stopTimer(){
+    stopTimer=()=>{
         window.clearInterval(this.interval);
     }
 
-    start(event){
+    start=(event)=>{
         this.setState({
             isRunning: true
         })
@@ -170,7 +164,7 @@ class TimeBox extends React.Component {
 
     }
 
-    pause(){
+    pause=()=>{
         this.setState(
             function(){
 
