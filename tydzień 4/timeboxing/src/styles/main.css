@@ -1,8 +1,12 @@
+html {
+    font-size: 14px;
+}
+
 .App {
     font-family: sans-serif;
 }
 
-.Timebox{
+.Timebox {
     border: 1px solid gray;
     border-radius: 5px;
     padding: 5px;
@@ -14,7 +18,7 @@
     border: 1px solid gray;
     border-radius: 5px;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 input {
@@ -23,7 +27,7 @@ input {
     font-size: 16px;
 }
 
-button {
+button{
     font-size: 16px;
     margin-left: 10px;
 }
@@ -47,7 +51,7 @@ button {
     padding: 5px;
 }
 
-.ProgressBar>div {
+.ProgressBar > div {
     height: 100%;
     background-color: orangered;
 }
